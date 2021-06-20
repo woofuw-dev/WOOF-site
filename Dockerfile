@@ -10,6 +10,4 @@ RUN npm i
 # Add source files etc
 COPY . .
 
-# Expose port 80 and run
-EXPOSE 8080
 CMD ["node", "index.js"]
