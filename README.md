@@ -12,8 +12,8 @@ Feel free to contribute to this project if you have improvements in mind. Any co
 - Open a pull request & request a review from @by77er
 
 ## Tasks
-- [ ] Start using [Express](https://expressjs.com/)
+- [*] Start using [Express](https://expressjs.com/)
+- [*] Use a templating engine
 - [ ] Add site content
-    - [ ] Use a templating engine if there are multiple pages
 - [ ] Improve Google Calendar visuals by using its API instead of an `iframe`
 - [ ] Add Discord integration for calendar access control

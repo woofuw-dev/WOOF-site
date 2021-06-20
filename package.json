@@ -1,0 +1,25 @@
+{
+  "name": "woof-site",
+  "version": "0.0.5",
+  "description": "WOOF's Website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cat-corp/WOOF-site.git"
+  },
+  "author": "by77er",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cat-corp/WOOF-site/issues"
+  },
+  "homepage": "https://github.com/cat-corp/WOOF-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0"
+  }
+}

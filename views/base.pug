@@ -1,0 +1,25 @@
+doctype html
+head
+  title WOOF
+  meta(charset='UTF-8')
+  link(rel='stylesheet' type='text/css' href='/assets/style.css')
+
+body.container
+  .header.curved
+    .header-top
+      img.header-img(src='/assets/pawlogo_t.png' alt='WOOF Logo')
+      .header-title
+        h1 WOOF
+        h3 WISCONSIN ORGANIZATION OF FURRIES
+    ul.header-links
+      a(href='/')
+        li.header-link.curved About WOOF
+      a(href='/')
+        li.header-link.curved How To Join
+      a(href='/calendar')
+        li.header-link.curved Event Calendar
+      a(href='https://discord.com' target='_blank' rel='noopener noreferrer')
+        li.header-link.curved Join Our Discord
+          img.discord-img(src='/assets/discord.png' alt='')
+  .content.curved
+    block content

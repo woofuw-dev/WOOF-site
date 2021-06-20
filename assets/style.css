@@ -31,38 +31,36 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font-size: 1.1rem;
+}
+
 /* root for page content layout */
 .container {
     /* fill view */
     width: auto;
     height: auto;
-
     /* css grid layout */
     display: grid;
     grid-template-columns: minmax(0, 1fr) 60rem minmax(0, 1fr);
     grid-template-rows: 1rem 20rem 1rem auto 1rem;
-
     background-color: #111111;
 }
 
 .header {
     grid-column: 2;
     grid-row: 2;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 1fr;
-
     background-color: #ff2020;
 }
 
 .header-top {
     grid-row: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
 }
 
@@ -74,13 +72,10 @@ h3 {
 .header-title {
     margin-left: 2rem;
     margin-right: 2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
     font-family: alte-haas-bold;
     color: #fcfcfc;
     text-shadow: 0 4px 5px rgba(17, 17, 17, .5);
@@ -88,11 +83,9 @@ h3 {
 
 .header-links {
     grid-row: 2;
-
     padding: 0;
     margin: 0;
     list-style-type: none;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,14 +94,9 @@ h3 {
 .header-link {
     margin: .5rem;
     padding: .8rem;
-
     vertical-align: middle;
-
-    border-radius: 1rem;
     background-color: #fcfcfc;
-
     box-shadow: 0 4px 5px rgba(17, 17, 17, .5);
-
     transition: transform .2s ease-in;
 }
 
@@ -118,6 +106,7 @@ h3 {
 }
 
 .discord-img {
+    margin-left: .2rem;
     height: 1rem;
     vertical-align: middle;
 }
@@ -125,10 +114,8 @@ h3 {
 .content {
     grid-column: 2;
     grid-row: 4;
-
     /* height: 100rem; */
     padding: 2rem;
-
     background-color: #fcfcfc;
     color: #111111;
 }
