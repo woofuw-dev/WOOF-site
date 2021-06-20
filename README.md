@@ -2,6 +2,16 @@
 
 This is the main site for WOOF at UW Madison.
 
+## Running
+
+Make sure you have a recent version of `node` installed. `v16.1.0` is known to work.
+```bash
+git clone https://github.com/cat-corp/WOOF-site
+cd WOOF-site
+npm install
+node index.js
+```
+
 ## Contributing
 
 Feel free to contribute to this project if you have improvements in mind. Any contributions will be appreciated.
