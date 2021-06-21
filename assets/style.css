@@ -42,14 +42,14 @@ h4 {
     /* css grid layout */
     display: grid;
     grid-template-columns: minmax(0, 1fr) 60rem minmax(0, 1fr);
-    grid-template-rows: 1rem 20rem 1rem auto 1rem;
-    background-color: #111111;
+    grid-template-rows: 20rem 1rem auto 1rem;
+    background-color: #eeeeee;
     color: #333333;
 }
 
 .header {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 1 / span 3;
+    grid-row: 1;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 1.3fr;
@@ -84,28 +84,39 @@ h4 {
 
 .header-links {
     grid-row: 2;
+    grid-column: 1;
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:#333333;
 }
 
 .header-link {
     margin: .5rem;
     padding: .8rem;
     vertical-align: middle;
-    background-color: #fcfcfc;
-    box-shadow: 0 4px 5px rgba(17, 17, 17, .5);
-    backface-visibility: hidden;
-    transition: transform .1s ease-in;
+    color: #fcfcfc;
+    transition: color .2s, background-color .2s ease-in;
     font-size: 1.2rem;
 }
 
 .header-link:hover {
-    transform: scale(1.05);
-    transition: transform .1s ease-out;
+    transition: all .2s ease-out;
+    color: #333333;
+    background-color: #fcfcfc;
+}
+
+.header-link img {
+    transition: filter.2s ease-in;
+    filter: invert(100%);
+}
+
+.header-link:hover img {
+    transition: all .2s ease-out;
+    filter: none;
 }
 
 .discord-img {
@@ -116,10 +127,11 @@ h4 {
 
 .content {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3;
     padding: 2rem;
+    box-shadow: 0 4px 5px rgba(17, 17, 17, .5);
     background-color: #fcfcfc;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 1.3rem;
 }
 
