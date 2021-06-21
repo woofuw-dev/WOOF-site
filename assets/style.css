@@ -53,7 +53,8 @@ h4 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 1.3fr;
-    background-color: #ff2020;
+    /* background-color: #ff2020; */
+    background-color: #ec3b2a;
     font-family: alte-haas-bold, Helvetica, sans-serif;
 }
 
