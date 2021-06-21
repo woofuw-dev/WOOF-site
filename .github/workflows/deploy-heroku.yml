@@ -1,24 +1,25 @@
-name: Build and Upload Docker Image to AWS
+name: Build and Upload Docker Image to Heroku
 
 on:
   push:
     branches:
     - main
 
+# Your workflows jobs.
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Build, Push and Deploy to Heroku
-      id: heroku
-      uses: jctaveras/heroku-deploy@v1.0.0
-      with:
-        email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
-        api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
-        app_name: ${{ secrets.HEROKU_APP_NAME }} # you aplication name
-        dockerfile_path: '.'
-        options: '-t woof-srv:latest'
-        formation: 'web'
+      - name: Build, Push and Release a Docker container to Heroku.
+        uses: gonuit/heroku-docker-deploy@v1.3.3
+        with:
+          email: ${{ secrets.HEROKU_EMAIL }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          dockerfile_directory: ./
+          dockerfile_name: Dockerfile
+          docker_options: "--no-cache"
+          process_type: web
