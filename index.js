@@ -19,5 +19,5 @@ app.get('/calendar', (req, res) => {
 app.use('/assets', express.static(ASSET_URL));
 
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+    console.log(`Listening on http://localhost:${PORT}`);
 });
