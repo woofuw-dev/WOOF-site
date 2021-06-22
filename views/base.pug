@@ -1,25 +1,27 @@
 doctype html
-head
-  title WOOF
-  meta(charset='UTF-8')
-  link(rel='stylesheet' type='text/css' href='/assets/style.css')
+html(lang=en)
+  head
+    title WOOF
+    meta(name="description", content="WOOF information website")
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' type='text/css' href='/assets/style.css')
 
-body.container
-  .header
-    .header-top
+  body.container
+    .header
       img.header-img(src='/assets/pawlogo_t.png' alt='WOOF Logo')
       .header-title
         h1 WOOF
         h4 WISCONSIN ORGANIZATION OF FURRIES
     ul.header-links
-      a(href='/')
-        li.header-link.curved About WOOF
-      a(href='/')
-        li.header-link.curved How to Join
-      a(href='/calendar')
-        li.header-link.curved Event Calendar
-      a(href='https://discord.com' target='_blank' rel='noopener noreferrer')
-        li.header-link.curved Join Our Discord
+      li.header-link.curved
+        a(href='/') About WOOF
+      li.header-link.curved
+        a(href='/') How to Join
+      li.header-link.curved
+        a(href='/calendar') Event Calendar
+      li.header-link.curved 
+        a(href='https://discord.com' target='_blank' rel='noopener noreferrer') Join Our Discord
           img.discord-img(src='/assets/discord.png' alt='')
-  .content.curved
-    block content
+    .content.curved
+      block content
