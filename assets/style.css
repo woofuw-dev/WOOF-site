@@ -110,12 +110,12 @@ h4 {
 }
 
 .header-link img {
-    transition: filter.2s ease-in;
+    transition: filter.2s ease-out;
     filter: invert(100%);
 }
 
 .header-link:hover img {
-    transition: all .2s ease-out;
+    transition: all .2s ease-in;
     filter: none;
 }
 
