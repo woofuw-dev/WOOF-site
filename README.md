@@ -24,7 +24,7 @@ Feel free to contribute to this project if you have improvements in mind. Any co
 ## Tasks
 - [x] Start using [Express](https://expressjs.com/)
 - [x] Use a templating engine
-- [ ] Add site content
+- [x] Add site content
 - [ ] Improve Google Calendar visuals by using its API instead of an `iframe`
 - [ ] Add Discord integration for calendar access control
 - [ ] Integrate with WOOF Discord bot..?
