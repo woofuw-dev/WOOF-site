@@ -1,0 +1,29 @@
+name: Build static site and push to host
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo 
+        uses: actions/checkout@v2
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+         node-version: '16'
+      - name: Build static site
+        run: node index.js
+      - name: Copy to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SCP_HOST }}
+          username: ${{ secrets.SCP_USERNAME }}
+          port: ${{ secrets.SCP_PORT }}
+          key: ${{ secrets.SCP_KEY }}
+          source: "generated/*"
+          target: ${{ secrets.SCP_TGT }}
+          strip_components: 1

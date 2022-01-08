@@ -2,7 +2,7 @@
 
 This is the main site for WOOF at UW Madison.
 
-## Running
+## Building the Site
 
 Make sure you have a recent version of `node` installed. `v16.1.0` is known to work.
 ```bash
@@ -11,6 +11,7 @@ cd WOOF-site
 npm install
 node index.js
 ```
+The site files should appear in ./generated/
 
 ## Contributing
 
@@ -22,9 +23,7 @@ Feel free to contribute to this project if you have improvements in mind. Any co
 - Open a pull request & request a review from @by77er
 
 ## Tasks
-- [x] Start using [Express](https://expressjs.com/)
 - [x] Use a templating engine
 - [x] Add site content
 - [ ] Improve Google Calendar visuals by using its API instead of an `iframe`
-- [ ] Add Discord integration for calendar access control
-- [ ] Integrate with WOOF Discord bot..?
+- [ ] Integrate with WOOF Discord bot?
