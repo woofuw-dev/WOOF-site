@@ -1,6 +1,6 @@
 @font-face {
     font-family: lato;
-    src: url(/assets/lato.ttf);
+    src: url(lato.ttf);
     font-display: swap;
 }
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-ct p {
-    max-width: 30vw;
+    max-width: 35rem;
     padding: 0 0 1rem 0;
 }
 
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5 {
 
     border-color: red;
     border-style: solid;
-    border-width: 0.2rem;
+    border-width: 0.15em;
 
     padding: 0.2rem;
     padding-left: 2rem;

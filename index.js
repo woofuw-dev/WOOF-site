@@ -31,8 +31,9 @@ const gen = async () => {
 // Wrap it all in a try/catch :)
 (async () => {
     try {
-        gen();
+        await gen();
     } catch (e) {
         console.error(`Generator error: ${e}`);
+        process.exit(1);
     }
 })();
