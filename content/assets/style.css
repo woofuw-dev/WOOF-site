@@ -97,8 +97,7 @@ h1, h2, h3, h4, h5 {
 
 .hero-ct p {
     max-width: 30vw;
-    margin: 0;
-    padding: 1rem 0 1rem 0;
+    padding: 0 0 1rem 0;
 }
 
 .hero-ct button {
