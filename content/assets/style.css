@@ -119,12 +119,21 @@ h1, h2, h3, h4, h5 {
     padding-right: 2rem;
     border-radius: 1.5rem;
     font-size: 1.2em;
-
-    margin-bottom: 1rem;
 }
 
 .hero-ct button:hover {
     border-color: white;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    height: 1.5rem;
 }
 
 .picture {
