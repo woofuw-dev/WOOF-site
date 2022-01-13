@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5 {
     min-height: 100vh;
 
     display: grid;
-    grid-template-columns: minmax(2rem, 0.3fr) auto minmax(2rem, 0.3fr);
+    grid-template-columns: auto min(90vw, 110rem) auto;
     grid-template-rows: 1rem 4rem;
 }
 
@@ -114,8 +114,8 @@ h1, h2, h3, h4, h5 {
     border-style: solid;
     border-width: 0.15em;
 
-    padding: 0.8rem 3.5rem;
-    border-radius: 1.5rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
     font-size: 1.2em;
 }
 
@@ -160,19 +160,24 @@ h1, h2, h3, h4, h5 {
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 30% min-content auto;
+    grid-template-rows: min-content min-content auto;
 }
 
 .wwatitle {
-    padding: 2rem 0 4rem 0;
+    height: min-content;
+    margin: 2rem 0 4rem 0;
 }
 
 .wwatitle h1 {
+    height: min-content;
     color: white;
     text-align: center;
     font-family: lato, Helvetica, sans-serif;
+    font-weight: bolder;
     font-size: 3rem;
     text-shadow: 0 2.5px 0 rgba(0, 0, 0, 1); 
+    margin: 0;
+    padding: 0;
 }
 
 .wwacards {
@@ -238,9 +243,7 @@ h1, h2, h3, h4, h5 {
 .wwabutton {
     padding: 4rem;
 
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
+    margin: 0 auto;
 }
 
 .wwabutton button {
@@ -255,8 +258,8 @@ h1, h2, h3, h4, h5 {
     border-style: solid;
     border-width: 0.15em;
 
-    padding: 0.8rem 3.5rem;
-    border-radius: 1.5rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
 }
 
 .wwabutton button:hover {
@@ -268,9 +271,10 @@ h1, h2, h3, h4, h5 {
 
 
 .activities {
+    font-family: lato, Helvetica, sans-serif;
     background-color: white;
 
-    min-height: 100vh;
+    min-height: min-content;
 
     display: grid;
     grid-template-columns: 50% 50%;
@@ -278,15 +282,165 @@ h1, h2, h3, h4, h5 {
 }
 
 .activities h1 {
+    margin: 2rem 0 4rem 0;
+    color: red;
+    font-size: 3rem;
+    font-weight: bolder;
     text-align: center;
     grid-column: 1 / 3;
     grid-row: 1;
 }
 
-.activity {
-
+.activitybox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8rem;
+    row-gap: 4rem;
+    grid-column: 1 / 3;
 }
 
+.activity {
+    max-width: min(32rem, 90vw);
+    text-align: center;
+}
+
+.activity img {
+    max-width: 90vw;
+}
+
+.activity h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.activity p {
+    font-size: 1.4rem;
+}
+
+.activitybutton {
+    margin: 0 auto 0 auto;
+    grid-column: 1 / 3;
+    grid-row: 3;
+    padding: 4rem;
+}
+
+.activitybutton button {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+
+    border-color: red;
+    border-style: solid;
+    border-width: 0.15rem;
+
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+.activitybutton button:hover {
+    border-color: black;
+}
+
+
+/* Get Involved */
+
+.getinvolved {
+    background-color: #171717;
+    
+    height: min-content;
+
+    display: grid;
+    grid-template-columns: auto min(90vw, 110rem) auto;
+}
+
+.involve {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.catcher {
+    color: white;
+    text-align: center;
+    font-family: lato, Helvetica, sans-serif;
+    max-width: 50rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.catcher h1 {
+    font-size: 2.5rem;
+}
+
+.catcher p {
+    margin: 1.5rem auto;
+    max-width: 30rem;
+}
+
+.catcherbutton button {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+
+    font-size: 1.2rem;
+
+    border-color: red;
+    border-style: solid;
+    border-width: 0.15em;
+
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.catcherbutton button:hover {
+    border-color: white;
+}
+
+.discord {
+    max-width: 50rem;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+}
+
+.disc1 {
+    position: absolute;
+    height: 20rem;
+    z-index: 3;
+    top: 6.25rem;
+    left: 26rem;
+}
+
+.disc2 {
+    height: 20rem;
+    position: absolute;
+    z-index: 2;
+    top: 10rem;
+}
+
+.disc3 {
+    height: 10rem;
+    position: absolute;
+    z-index: 1;
+    top: 26rem;
+    left: -4rem;
+}
+
+@media only screen and (max-width : 1300px) {
+    .discord {
+        display: none;
+    }
+}
 
 @media only screen and (max-width : 1200px) {
 
@@ -301,7 +455,7 @@ h1, h2, h3, h4, h5 {
     .wwacard {
         height: min-content;
         padding-bottom: 1rem;
-        width: 90vw;    
+        width: 90vw;
         border-radius: 3rem;
         grid-template-rows: 1rem 3rem auto;
     }
@@ -319,6 +473,13 @@ h1, h2, h3, h4, h5 {
     .cardi {
         display: none;
     }
+    .activitybox {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width : 700px) { 
+    
 }
 
 @media only screen and (max-width : 480px) {
