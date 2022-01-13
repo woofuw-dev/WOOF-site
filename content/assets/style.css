@@ -93,6 +93,8 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    animation:fadeup 0.5s ease-out;
 }
 
 .hero-ct p {
@@ -143,7 +145,15 @@ h1, h2, h3, h4, h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    animation:fadeup 0.5s ease-out;
 }
+
+@keyframes fadeup {
+    0% { opacity: 0; transform: translateY(3rem); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 
 .picture img {
     margin-bottom: 8vh;
