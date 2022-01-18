@@ -1,11 +1,94 @@
 extends templates/base
 
 block content
-    h2 Welcome!
-    p The Wisconsin Organization of Furries is a gathering of people interested in furries and furry culture. The purpose of this group is to encourage creativity and socialization among those with common interest, as well as provide a place for freedom of self-expression.
-    br
-    h3 Club Membership
-    p This organization is focused on bringing together students and alumni of schools within the Madison, Wisconsin area. Those from UW - Madison, MATC, and Edgewood college can be considered members. Events and activities hosted by the club will prioritize students of these schools first, though participation is heavily dependent on the event and will be decided on a case-to-case basis. There are no formal requirements other than this to join the group.
-    br
-    h3 How to Join 
-    p If you're interested in joining WOOF, please feel free to join our Discord server by clicking the link in the navbar above.
+    .splash
+        .header
+            .logobox 
+                img(src='assets/pawlogo_t.png')
+                h1 WOOF
+            nav 
+                a(href='#more')
+                    h3.link About 
+                a(href=calendar)
+                    h3.link Calendar 
+                a(href=photos)
+                    h3.link Photos
+                a(href=discord target='_blank' rel='noopener noreferrer')
+                    h3.link Discord
+        .hero 
+            .hero-ct
+                .ct-bundle
+                    h1 Notices bulge. OWO what's this?
+                    p I'm baby keffiyeh DIY craft beer post-ironic butcher four dollar toast knausgaard cray letterpress. Distillery etsy green juice, direct trade kale chips kickstarter hella glossier selfies tattooed chambray jianbing.
+                    .socials
+                        a(href='#more')
+                            button Learn More
+                        a(href=twitter target='_blank' rel='noopener noreferrer').social
+                            img(src='assets/img/twit.png')
+                        a(href=facebook  target='_blank' rel='noopener noreferrer').social
+                            img(src='assets/img/fb.png')
+            .picture 
+                img(src='assets/borley.png')
+    .whoweare(id='more') 
+        .wwatitle 
+            h1 Who We Are:
+        .wwacards
+            .wwacard
+                .boximg
+                    img(src='assets/img/ico3.png').cardi
+                    h2 Students & Alumni
+                .line
+                p We are students and alumni in the Madison, WI area.
+                    br
+                    br
+                    | (UW-Madison, MATC, and Edgewood)
+            .wwacard
+                .boximg 
+                    img(src='assets/img/ico1.png').cardi
+                    h2 Furries
+                .line
+                p We are people interested in furries and furry culture, or are looking to learn more about it!
+            .wwacard 
+                .boximg
+                    img(src='assets/img/ico2.png').cardi
+                    h2 LGBTQ+ & Allies
+                .line
+                p We are people who encourage self-expression and embracing our sexualities.
+        .wwabutton
+            a(href=photos)
+                button View Our Gallery
+    .activities(id='activities')
+        h1 What the Dog(s) Doin'?
+        .activitybox 
+            .activity
+                img(src='assets/img/activity2.png')
+                h2 Conventions
+                p We help organize and attend furry conventions!
+                    br
+                    i (Aquatifur, MFF, FurSquared, etc.)
+                    br
+                    br
+                    | "What's better than being a fluffball for a weekend?"
+            .activity 
+                img(src='assets/img/activity1.png')
+                h2 Events
+                p We host bi-weekly "Kickback" gatherings where we play games, draw, and more. 
+                    br
+                    br
+                    | Our group also hosts gift-exchanges, lunch get-togethers, and plenty more activities!
+        .activitybutton 
+            a(href=calendar)
+                button View Our Calendar
+    .getinvolved(id='getinvolved')
+        .involve
+            .catcher 
+                h1 How do I get involved?
+                p Join our Discord! This is where we discuss events, communicate, and play games together!
+                .catcherbutton
+                    a(href=discord target='_blank' rel='noopener noreferrer')
+                        button Join Our Discord
+            .discord 
+                img(src='assets/img/chat1.png').disc1
+                img(src='assets/img/chat2.png').disc2
+                img(src='assets/img/chat3.png').disc3
+    
