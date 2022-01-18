@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5 {
 .disc3 {
     height: 10rem;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 26rem;
     left: -4rem;
 }
