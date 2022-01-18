@@ -9,8 +9,9 @@ block content
             nav 
                 h3.link About 
                 h3.link Calendar 
-                h3.link Photos 
-                h3.link Discord
+                h3.link Photos
+                a(href=discord target='_blank' rel='noopener noreferrer')
+                    h3.link Discord
         .hero 
             .hero-ct
                 .ct-bundle
@@ -19,9 +20,9 @@ block content
                     .socials
                         a(href='#more')
                             button Learn More
-                        a(href='https://twitter.com' target='_blank' rel='noopener noreferrer').social
+                        a(href=twitter target='_blank' rel='noopener noreferrer').social
                             img(src='assets/img/twit.png')
-                        a(href='https://facebook.com'  target='_blank' rel='noopener noreferrer').social
+                        a(href=facebook  target='_blank' rel='noopener noreferrer').social
                             img(src='assets/img/fb.png')
             .picture 
                 img(src='assets/borley.png')
@@ -78,8 +79,9 @@ block content
             .catcher 
                 h1 How do I get involved?
                 p Join our Discord! This is where we discuss events, communicate, and play games together!
-                .catcherbutton 
-                    button Join Our Discord
+                .catcherbutton
+                    a(href=discord target='_blank' rel='noopener noreferrer')
+                        button Join Our Discord
             .discord 
                 img(src='assets/img/chat1.png').disc1
                 img(src='assets/img/chat2.png').disc2

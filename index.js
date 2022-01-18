@@ -3,7 +3,6 @@ import path from "path";
 import pug from "pug";
 
 const CONTENT_DIR = process.cwd() + "/content/";
-const ASSETS_DIR = process.cwd() + "/content/assets/";
 const OUTPUT_DIR = process.cwd() + "/generated/";
 
 const gen = async () => {
