@@ -7,9 +7,12 @@ block content
                 img(src='assets/pawlogo_t.png')
                 h1 WOOF
             nav 
-                h3.link About 
-                h3.link Calendar 
-                h3.link Photos
+                a(href='#more')
+                    h3.link About 
+                a(href=calendar)
+                    h3.link Calendar 
+                a(href=photos)
+                    h3.link Photos
                 a(href=discord target='_blank' rel='noopener noreferrer')
                     h3.link Discord
         .hero 
@@ -52,7 +55,8 @@ block content
                 .line
                 p We are people who encourage self-expression and embracing our sexualities.
         .wwabutton
-            button View Our Gallery
+            a(href=photos)
+                button View Our Gallery
     .activities(id='activities')
         h1 What the Dog(s) Doin'?
         .activitybox 
@@ -73,7 +77,8 @@ block content
                     br
                     | Our group also hosts gift-exchanges, lunch get-togethers, and plenty more activities!
         .activitybutton 
-            button View Our Calendar
+            a(href=calendar)
+                button View Our Calendar
     .getinvolved(id='getinvolved')
         .involve
             .catcher 
