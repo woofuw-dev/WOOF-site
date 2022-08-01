@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cat-corp/WOOF-site#readme",
   "dependencies": {
-    "moment": "^2.29.4",
+    "fs-extra": "^10.0.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
