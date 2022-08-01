@@ -32,8 +32,18 @@ h1, h2, h3, h4, h5 {
     grid-template-rows: 1rem 4rem;
 }
 
+.head {
+
+    background-color: #171717;
+
+    display: grid;
+    grid-template-columns: auto min(90vw, 110rem) auto;
+    grid-template-rows: 1rem 4rem;
+}
+
 .header {
     color: white;
+    
     font-family: lato, Helvetica, sans-serif;
 
     grid-column: 2;
@@ -76,7 +86,7 @@ h1, h2, h3, h4, h5 {
 
 .hero {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 1;
 
     display: grid;
     grid-template-columns: 50% 50%;

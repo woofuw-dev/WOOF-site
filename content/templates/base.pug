@@ -2,8 +2,9 @@
 - const twitter = 'https://twitter.com/woofwisc';
 - const facebook = 'https://www.facebook.com/groups/775503146349264';
 
-- const calendar = 'calendar.html';
+- const calendar = 'events.html';
 - const photos = 'https://www.flickr.com/groups/madisonwoof/pool/';
+- const about = 'index.html';
 
 doctype html
 html(lang=en)
@@ -17,3 +18,17 @@ html(lang=en)
 
   body
     block content
+      .head
+        .header
+            .logobox 
+                img(src='assets/pawlogo_t.png')
+                h1 WOOF
+            nav 
+                a(href=about)
+                    h3.link About 
+                a(href=calendar)
+                    h3.link Calendar 
+                a(href=photos)
+                    h3.link Photos
+                a(href=discord target='_blank' rel='noopener noreferrer')
+                    h3.link Discord
