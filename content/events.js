@@ -12,13 +12,13 @@ document.body.childNodes.item(1).firstChild.appendChild(card);
 
 // add image element
 let img = document.createElement("img");
-img.setAttribute('style','width: 100%');
+img.setAttribute('style','width: 20vw');
 img.setAttribute('id','cardimg');
 
 if (false) { // TODO: check if event has image
     img.setAttribute('src', 'assets/borley.png'); // TODO: change to get event image
 }
-else {
+else { // default for events with no images
     img.setAttribute('src', 'assets/pawlogo_t.png');
 }
 card.appendChild(img);
