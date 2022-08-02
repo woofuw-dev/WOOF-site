@@ -557,6 +557,7 @@ h1, h2, h3, h4, h5 {
     transition: 0.3s;
     max-width: 25vw;
     grid-column: 2;
+    grid-row: 2;
     border-radius: 5px;
     background-color: white;
   }
@@ -568,13 +569,29 @@ h1, h2, h3, h4, h5 {
   
   /* Add some padding inside the card container */
   .container {
+    text-align: center;
     padding: 2px 16px;
   }
 
   .events {
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-columns: auto;
+    font-family: lato, Helvetica, sans-serif;
+
+    grid-column-start: 2;
+    display: flex;
     height: fit-content;
+<<<<<<< HEAD
   }
 >>>>>>> 0df18a6 (added beggining of card to page)
+=======
+    width: 100%
+    
+  }
+
+  .card h1 {
+    font-size: 2.5rem;
+  }
+
+  .card p {
+
+  }
+>>>>>>> 938f672 (continuing card changes)

@@ -19,7 +19,7 @@ var events;
 
 let card = document.createElement('div');
 card.className = 'card';
-document.body.childNodes.item(1).firstChild.firstChild.appendChild(card);
+document.body.childNodes.item(1).firstChild.appendChild(card);
 
 //add if event contains image
 let img = document.createElement("img");
