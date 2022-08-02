@@ -577,6 +577,7 @@ h1, h2, h3, h4, h5 {
   .events {
     font-family: lato, Helvetica, sans-serif;
 
+    justify-content: center;
     grid-column-start: 2;
     display: flex;
     height: fit-content;
@@ -585,7 +586,6 @@ h1, h2, h3, h4, h5 {
 >>>>>>> 0df18a6 (added beggining of card to page)
 =======
     width: 100%
-    
   }
 
   .card h1 {
