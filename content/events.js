@@ -23,8 +23,14 @@ document.body.childNodes.item(1).firstChild.appendChild(card);
 
 //add if event contains image
 let img = document.createElement("img");
-img.setAttribute('src', '/generated/assets/borley.png');
 img.setAttribute('style','width: 100%');
+img.setAttribute('id','cardimg')
+if (false) {
+    img.setAttribute('src', 'assets/borley.png');
+}
+else {
+    img.setAttribute('src', 'assets/pawlogo_t.png');
+}
 card.appendChild(img);
 
 let container = document.createElement('div');
