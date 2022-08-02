@@ -560,6 +560,7 @@ h1, h2, h3, h4, h5 {
     grid-row: 2;
     border-radius: 5px;
     background-color: white;
+    min-height: 35vh;
   }
   
   /* On mouse-over, add a deeper shadow */
