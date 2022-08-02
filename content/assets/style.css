@@ -304,7 +304,6 @@ h1, h2, h3, h4, h5 {
 .activitybox {
     display: flex;
     justify-content: center;
-    align-items: center;
     column-gap: 8rem;
     row-gap: 4rem;
     grid-column: 1 / 3;
