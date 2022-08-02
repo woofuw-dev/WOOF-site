@@ -4,7 +4,7 @@ var events;
 
 // TODO: make new card for each event
 // for (discordEvent in events) {
-
+for (let i = 0; i < 3; i++){
 // make new card
 let card = document.createElement('div');
 card.className = 'card';
@@ -39,3 +39,4 @@ subtitle.innerText = "subtitle"; // TODO: change to get event description
 container.appendChild(subtitle);
 
 // }
+}
