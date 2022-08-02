@@ -17,15 +17,17 @@ var events;
 //     container.className = 'container';
 // }
 
+// make new card
 let card = document.createElement('div');
 card.className = 'card';
 document.body.childNodes.item(1).firstChild.appendChild(card);
 
-//add if event contains image
+// add image
 let img = document.createElement("img");
 img.setAttribute('style','width: 100%');
-img.setAttribute('id','cardimg')
-if (false) {
+img.setAttribute('id','cardimg');
+
+if (false) { //add if event contains image
     img.setAttribute('src', 'assets/borley.png');
 }
 else {
@@ -33,14 +35,17 @@ else {
 }
 card.appendChild(img);
 
+// make text container
 let container = document.createElement('div');
 container.className = 'container';
 card.appendChild(container);
 
+// make title
 let title = document.createElement('h1');
 title.innerText = "test";
 container.appendChild(title);
 
+// make description
 let subtitle = document.createElement('p');
 subtitle.innerText = "subtitle";
 container.appendChild(subtitle);
