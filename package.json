@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/cat-corp/WOOF-site#readme",
   "dependencies": {
-    "discord.js": "^14.1.2",
     "fs-extra": "^10.0.0",
     "pug": "^3.0.2"
   },
