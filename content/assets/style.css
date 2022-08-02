@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5 {
 
     display: grid;
     grid-template-columns: auto min(90vw, 110rem) auto;
-    grid-template-rows: 1rem 4rem;
 }
 
 .head {
@@ -556,6 +555,8 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     max-width: 25vw;
+    margin-inline: 3vw;
+    margin-bottom: 15vh;
     border-radius: 50px;
     background-color: white;
     min-height: 35vh;
@@ -575,6 +576,7 @@ h1, h2, h3, h4, h5 {
   .events {
     font-family: lato, Helvetica, sans-serif;
     padding-top: 3rem;
+    flex-wrap: wrap;
     justify-content: center;
     grid-column-start: 2;
     display: flex;
