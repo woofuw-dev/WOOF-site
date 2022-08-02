@@ -28,7 +28,11 @@ block content
                         a(href=facebook  target='_blank' rel='noopener noreferrer').social
                             img(src='assets/img/fb.png')
             .picture 
-                img(src='assets/borley.png')
+                img(src="blank" id="splashimg")
+                script 
+                    include frontimg.js
+                
+                
     .whoweare(id='more') 
         .wwatitle 
             h1 Who We Are:
@@ -65,14 +69,14 @@ block content
                 h2 Conventions
                 p We help organize and attend furry conventions!
                     br
-                    i (Aquatifur, MFF, FurSquared, etc.)
+                    i (Anthrocon, MFF, FurSquared, etc.)
                     br
                     br
                     | "What's better than being a fluffball for a weekend?"
             .activity 
                 img(src='assets/img/activity1.png')
                 h2 Events
-                p We host bi-weekly "Kickback" gatherings where we play games, draw, and more. 
+                p We host regular "Kickback" gatherings where we play games, draw, and more. 
                     br
                     br
                     | Our group also hosts gift-exchanges, lunch get-togethers, and plenty more activities!
