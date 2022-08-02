@@ -2,4 +2,4 @@ var imagesArray = ["barley_ac_1.png", "barley_ac_2.png", "barley_beach_1.png", "
 
 const img = document.getElementById("splashimg");
 var num = Math.floor(Math.random() * 10); // 0...11
-img.src = '/assets/img/carosel/' + imagesArray[num];
+img.src = 'assets/img/carosel/' + imagesArray[num];
