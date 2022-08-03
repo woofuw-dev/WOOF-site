@@ -19,7 +19,11 @@ a {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
 }
 
@@ -42,7 +46,7 @@ h1, h2, h3, h4, h5 {
 
 .header {
     color: white;
-    
+
     font-family: lato, Helvetica, sans-serif;
 
     grid-column: 2;
@@ -53,7 +57,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
 }
 
-.logobox  {
+.logobox {
     height: auto;
     display: flex;
     align-items: center;
@@ -103,7 +107,7 @@ h1, h2, h3, h4, h5 {
     justify-content: flex-start;
     align-items: center;
 
-    animation:fadeup 0.5s ease-out;
+    animation: fadeup 0.5s ease-out;
 }
 
 .hero-ct p {
@@ -155,12 +159,19 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     justify-content: center;
 
-    animation:fadeup 0.5s ease-out;
+    animation: fadeup 0.5s ease-out;
 }
 
 @keyframes fadeup {
-    0% { opacity: 0; transform: translateY(3rem); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -194,7 +205,7 @@ h1, h2, h3, h4, h5 {
     font-family: lato, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 3rem;
-    text-shadow: 0 2.5px 0 rgba(0, 0, 0, 1); 
+    text-shadow: 0 2.5px 0 rgba(0, 0, 0, 1);
     margin: 0;
     padding: 0;
 }
@@ -217,7 +228,7 @@ h1, h2, h3, h4, h5 {
     font-family: lato, Helvetica, sans-serif;
 
     border-radius: 4rem;
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 1); 
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 1);
 
     display: grid;
     grid-template-rows: 3.5rem 9rem 2rem auto;
@@ -369,7 +380,7 @@ h1, h2, h3, h4, h5 {
 
 .getinvolved {
     background-color: #171717;
-    
+
     height: min-content;
 
     display: grid;
@@ -492,24 +503,23 @@ h1, h2, h3, h4, h5 {
     .cardi {
         display: none;
     }
+
     .activitybox {
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width : 700px) { 
-    
-}
+@media only screen and (max-width : 700px) {}
 
 @media only screen and (max-width : 480px) {
     .splash {
         grid-template-rows: 1rem 5rem;
     }
-    
+
     .hero {
         grid-column: 2;
         grid-row: 3;
-    
+
         grid-template-columns: auto;
         grid-template-rows: auto auto;
     }
@@ -532,7 +542,7 @@ h1, h2, h3, h4, h5 {
         grid-row: 1;
     }
 
-    .picture img { 
+    .picture img {
         margin-bottom: 0;
     }
 
@@ -542,57 +552,71 @@ h1, h2, h3, h4, h5 {
 
     /* About */
 
-    
+
     /* Activities */
 
 
 }
-<<<<<<< HEAD
-=======
 
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+
+    display: grid;
+
     max-width: 25vw;
     margin-inline: 3vw;
     margin-bottom: 15vh;
     border-radius: 50px;
     background-color: white;
-    min-height: 35vh;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
+    min-height: 60vh;
+    min-width: 20vw;
+}
+
+#cardimg {
+    justify-self: center;
+    max-height: 40vh;
+    width: auto;
+    height: auto;
+    max-width: 20vw;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
     text-align: center;
     padding: 2px 16px;
-  }
+    overflow: clip;
+    max-width: 15vw;
+    justify-self: center;
+    max-height: 15vh;
+}
 
-  .events {
+.events {
     font-family: lato, Helvetica, sans-serif;
-    padding-top: 3rem;
+    padding-top: 7rem;
     flex-wrap: wrap;
     justify-content: center;
     grid-column-start: 2;
     display: flex;
     height: fit-content;
-<<<<<<< HEAD
-  }
->>>>>>> 0df18a6 (added beggining of card to page)
-=======
-    width: 100%
-  }
+}
 
-  .card h1 {
+.noevent {
+    display: block;
+    color: #ffffff1c;
+    font-style: italic;
+}
+
+.card h1 {
     font-size: 2.5rem;
-  }
+}
 
-  .card p {
+.card p {
 
-  }
->>>>>>> 938f672 (continuing card changes)
+}
