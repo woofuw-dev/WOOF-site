@@ -1,6 +1,5 @@
-const server_id = '633521381593710602';
 const NUM_CARD_IMAGES = 5;
-var events;
+
 //get events from server
 
 if (true) { // TODO: check if any events are planned
@@ -18,17 +17,10 @@ if (true) { // TODO: check if any events are planned
 
         // add image element
         let img = document.createElement("img");
-        //img.setAttribute('style', 'width: 20vw');
         img.setAttribute('id', 'cardimg');
 
-        // if (false) { // TODO: check if event has image
-        //     img.setAttribute('src', 'assets/borley.png'); // TODO: change to get event image
-        // }
-        // else { // default for events with no images
-        //     img.setAttribute('src', 'assets/pawlogo_t.png');
-        // }
+        // add random image
         var num = Math.floor(Math.random() * NUM_CARD_IMAGES); // select random image from list
-        //img.src = 'assets/img/cards/card' + num + '.jpg';
         img.setAttribute('src', 'assets/img/cards/card' + (num + 1) + '.jpg');
         card.appendChild(img);
 
@@ -58,10 +50,3 @@ else { // display "No events planned :(" if no events found
     title.innerText = "No events planned :(";
     noevent.appendChild(title);
 }
-
-
-// //const imagesArray = ["barley_ac_1.png", "barley_ac_2.png", "barley_beach_1.png", "barley_mo_carbon_beach_1.png", "mo_beach_1.png", "mo_beach_2.png", "pride_beach_1.png", "sergio_barley_1.png", "twister_ac_1.png", "twister_ac_2.png", "twister_barley_ac_1.png"];
-// const img = document.getElementById("splashimg");
-
-// var num = Math.floor(Math.random() * imagesArray.length); // select random image from list
-// img.src = 'assets/img/cards/card' + num + '.jpg';
