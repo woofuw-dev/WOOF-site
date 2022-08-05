@@ -1,7 +1,7 @@
 extends templates/base
 
 block content
-    .splash
+    .head
         .header
             .logobox 
                 img(src='assets/pawlogo_t.png')
@@ -9,12 +9,13 @@ block content
             nav 
                 a(href='#more')
                     h3.link About 
-                a(href=calendar)
+                a(href=CALENDAR)
                     h3.link Calendar 
-                a(href=photos)
+                a(href=PHOTOS)
                     h3.link Photos
-                a(href=discord target='_blank' rel='noopener noreferrer')
+                a(href=DISCORD target='_blank' rel='noopener noreferrer')
                     h3.link Discord
+    .splash
         .hero 
             .hero-ct
                 .ct-bundle
@@ -23,9 +24,9 @@ block content
                     .socials
                         a(href='#more')
                             button Learn More
-                        a(href=twitter target='_blank' rel='noopener noreferrer').social
+                        a(href=TWITTER target='_blank' rel='noopener noreferrer').social
                             img(src='assets/img/twit.png')
-                        a(href=facebook  target='_blank' rel='noopener noreferrer').social
+                        a(href=FACEBOOK  target='_blank' rel='noopener noreferrer').social
                             img(src='assets/img/fb.png')
             .picture 
                 img(src="blank" id="splashimg")
@@ -59,7 +60,7 @@ block content
                 .line
                 p We are people who encourage self-expression and embracing our sexualities.
         .wwabutton
-            a(href=photos target='_blank' rel='noopener noreferrer')
+            a(href=PHOTOS target='_blank' rel='noopener noreferrer')
                 button View Our Gallery
     .activities(id='activities')
         h1 What the Dog(s) Doin'?
@@ -81,7 +82,7 @@ block content
                     br
                     | Our group also hosts gift-exchanges, lunch get-togethers, and plenty more activities!
         .activitybutton 
-            a(href=calendar)
+            a(href=CALENDAR)
                 button View Our Calendar
     .getinvolved(id='getinvolved')
         .involve
@@ -89,7 +90,7 @@ block content
                 h1 How do I get involved?
                 p Join our Discord! This is where we discuss events, communicate, and play games together!
                 .catcherbutton
-                    a(href=discord target='_blank' rel='noopener noreferrer')
+                    a(href=DISCORD target='_blank' rel='noopener noreferrer')
                         button Join Our Discord
             .discord 
                 img(src='assets/img/chat1.png').disc1
