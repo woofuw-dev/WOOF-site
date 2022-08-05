@@ -37,11 +37,6 @@ h5 {
     grid-template-columns: auto min(90vw, 110rem) auto;
 }
 
-.eventcontainer {
-    display: grid;
-    grid-template-columns: auto min(90vw, 110rem) auto;
-}
-
 .head {
 
     min-height: 10vh;
