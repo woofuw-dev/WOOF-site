@@ -538,3 +538,58 @@ h1, h2, h3, h4, h5 {
 
 
 }
+
+/* footer */
+footer {
+    opacity: 0.3;
+    color: white;
+    font-family: lato, Helvetica, sans-serif;
+    background-color: #171717;
+    padding-bottom: 7rem;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40vw;
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-top: 7rem;
+}
+
+footer .logobox {
+    grid-column: 1;
+    justify-self: center;
+}
+
+footernav {
+    font-size: .75rem;
+    justify-content: center;
+    display: grid;
+}
+
+.foot>footernav:nth-child(2)>h1:nth-child(1) {
+    justify-self: center;
+}
+
+.license {
+    display: grid;
+}
+
+.licensecontainer {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.licensetextcontainer {
+    display: block ruby;
+    overflow: clip;
+    max-width: 80vw;
+}
+
+.navcontainer {
+    display: flex;
+    gap: 1rem;
+}
