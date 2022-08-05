@@ -1,9 +1,10 @@
-- const discord = 'https://discord.com/invite/vYE5yBv';
-- const twitter = 'https://twitter.com/woofwisc';
-- const facebook = 'https://www.facebook.com/groups/775503146349264';
+- const DISCORD = 'https://discord.com/invite/vYE5yBv';
+- const TWITTER = 'https://twitter.com/woofwisc';
+- const FACEBOOK = 'https://www.facebook.com/groups/775503146349264';
 
-- const calendar = 'calendar.html';
-- const photos = 'https://www.flickr.com/groups/madisonwoof/pool/';
+- const CALENDAR = 'calendar.html';
+- const PHOTOS = 'https://www.flickr.com/groups/madisonwoof/pool/';
+- const ABOUT = 'index.html';
 
 doctype html
 html(lang=en)
@@ -17,3 +18,45 @@ html(lang=en)
 
   body
     block content
+      .head
+        .header
+            .logobox 
+                img(src='assets/pawlogo_t.png')
+                h1 WOOF
+            nav 
+                a(href=ABOUT)
+                    h3.link About
+                a(href=CALENDAR)
+                    h3.link Calendar 
+                a(href=PHOTOS)
+                    h3.link Photos
+                a(href=DISCORD target='_blank' rel='noopener noreferrer')
+                    h3.link Discord
+
+  footer
+    .foot
+      .logobox
+        img(src='assets/pawlogo_t.png')
+        h1 WOOF
+      footernav
+        h1 Find us elsewhere
+        .navcontainer
+          a(href=TWITTER)
+            h1.link Twitter
+          a(href=PHOTOS)
+            h1.link Flickr
+          a(href=DISCORD)
+            h1.link Discord
+          a(href=FACEBOOK)
+            h1.link Facebook
+    .license
+      .licensecontainer
+        a(rel='license' href='http://creativecommons.org/licenses/by-nc/4.0/')
+          img(alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png')
+        .licensetextcontainer
+          span(xmlns:dct='http://purl.org/dc/terms/' href='http://purl.org/dc/dcmitype/InteractiveResource' property='dct:title' rel='dct:type') WOOF Site
+          |  by 
+          a(xmlns:cc='http://creativecommons.org/ns#' href='https://woofclub.xyz' property='cc:attributionName' rel='cc:attributionURL') the Wisconsin Organization of Furries
+          |  is licensed under a 
+          a(rel='license' href='http://creativecommons.org/licenses/by-nc/4.0/') Creative Commons Attribution-NonCommercial 4.0 International License
+          | .
