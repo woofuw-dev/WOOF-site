@@ -37,11 +37,6 @@ h5 {
     grid-template-columns: auto min(90vw, 110rem) auto;
 }
 
-.eventcontainer {
-    display: grid;
-    grid-template-columns: auto min(90vw, 110rem) auto;
-}
-
 .head {
 
     min-height: 10vh;
@@ -556,6 +551,11 @@ h5 {
 }
 
 /* Events Page */
+.eventcontainer {
+    display: grid;
+    grid-template-columns: auto min(90vw, 110rem) auto;
+}
+
 .events {
     font-family: lato, Helvetica, sans-serif;
     padding-top: 7rem;
