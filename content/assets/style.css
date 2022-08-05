@@ -632,6 +632,8 @@ footer {
     color: white;
     font-family: lato, Helvetica, sans-serif;
     background-color: #171717;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
 }
 
 .foot {
@@ -640,6 +642,7 @@ footer {
     flex-wrap: wrap;
     column-gap: 40vw;
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 footer .logobox {
