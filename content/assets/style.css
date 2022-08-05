@@ -599,7 +599,7 @@ h5 {
     padding: 2px 16px;
     overflow: clip;
 
-    justify-self: center;
+    text-align: center;
 
     max-height: 17rem;
 }
