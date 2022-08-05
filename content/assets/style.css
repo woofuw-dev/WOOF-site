@@ -553,12 +553,6 @@ h5 {
         justify-content: center;
     }
 
-    /* About */
-
-
-    /* Activities */
-
-
 }
 
 /* Events Page */
@@ -600,32 +594,34 @@ h5 {
     width: inherit;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
+/* Card text container */
 .container {
     padding: 2px 16px;
     overflow: clip;
 
     justify-self: center;
-    
+
     max-height: 17rem;
 }
 
-.noevent {
-    color: #ffffff1c;
-    font-style: italic;
-
-    display: block;
-}
-
+/* Card text */
 .card h1 {
     font-size: 2.5rem;
 }
 
 .card p {
     font-size: 1rem;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Text if there's no event */
+.noevent {
+    color: #ffffff1c;
+    font-style: italic;
+
+    display: block;
 }
