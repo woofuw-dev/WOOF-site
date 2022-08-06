@@ -590,13 +590,13 @@ footernav {
 
 .licensecontainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.2rem;
 }
 
 .licensetextcontainer {
-    display: block ruby;
-    overflow: clip;
+    display: block;
     max-width: 80vw;
 }
 
