@@ -21,11 +21,7 @@ a {
     color: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
@@ -110,7 +106,7 @@ h5 {
     justify-content: flex-start;
     align-items: center;
 
-    animation: fadeup 0.5s ease-out;
+    animation:  fadeup 0.5s ease-out;
 }
 
 .hero-ct p {
@@ -162,18 +158,25 @@ h5 {
     align-items: center;
     justify-content: center;
 
-    animation: fadeup 0.5s ease-out;
+    animation:  fadeup 0.5s ease-out;
 }
 
 @keyframes fadeup {
     0% {
+       
         opacity: 0;
+       
         transform: translateY(3rem);
+   
     }
 
+
     100% {
+       
         opacity: 1;
+       
         transform: translateY(0);
+   
     }
 }
 
@@ -383,7 +386,7 @@ h5 {
 
 .getinvolved {
     background-color: #171717;
-
+    
     height: min-content;
 
     display: grid;
@@ -506,7 +509,6 @@ h5 {
     .cardi {
         display: none;
     }
-
     .activitybox {
         flex-direction: column;
     }
@@ -666,13 +668,13 @@ footernav {
 
 .licensecontainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.2rem;
 }
 
 .licensetextcontainer {
-    display: block ruby;
-    overflow: clip;
+    display: block;
     max-width: 80vw;
 }
 
