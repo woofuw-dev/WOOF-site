@@ -1,20 +1,6 @@
 extends templates/base
 
 block content
-    .head
-        .header
-            .logobox 
-                img(src='assets/pawlogo_t.png')
-                h1 WOOF
-            nav 
-                a(href='#more')
-                    h3.link About 
-                a(href=CALENDAR)
-                    h3.link Calendar 
-                a(href=PHOTOS)
-                    h3.link Photos
-                a(href=DISCORD target='_blank' rel='noopener noreferrer')
-                    h3.link Discord
     .splash
         .hero 
             .hero-ct
@@ -32,8 +18,7 @@ block content
                 img(src="blank" id="splashimg")
                 script 
                     include frontimg.js
-                
-                
+
     .whoweare(id='more') 
         .wwatitle 
             h1 Who We Are:
@@ -96,4 +81,3 @@ block content
                 img(src='assets/img/chat1.png').disc1
                 img(src='assets/img/chat2.png').disc2
                 img(src='assets/img/chat3.png').disc3
-    
