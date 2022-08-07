@@ -312,8 +312,6 @@ h5 {
 
 
 /* Activities */
-
-
 .activities {
     font-family: lato, Helvetica, sans-serif;
     background-color: white;
@@ -578,8 +576,6 @@ h5 {
     grid-column-start: 2;
 
     height: auto;
-
-    /* max-height: 30rem; */
 }
 
 .card {
@@ -588,15 +584,12 @@ h5 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 
-    
     width: 25rem;
 
     margin-inline: 2.5rem;
     margin-bottom: 5rem;
 
-    border-radius: 25px;
-
-    /* box-sizing: border-box; */
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 25rem) {
@@ -636,11 +629,7 @@ h5 {
 /* Card text container */
 .container {
     padding: 2px 16px;
-    /* overflow: clip; */
-
     text-align: center;
-
-    /* max-height: 17rem; */
 }
 
 /* Card text */
