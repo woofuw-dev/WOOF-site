@@ -43,5 +43,5 @@ Feel free to contribute to this project if you have improvements in mind. Any co
 ## Tasks
 - [x] Use a templating engine
 - [x] Add site content
-- [ ] Improve Google Calendar visuals by using its API instead of an `iframe`
-- [ ] Integrate with WOOF Discord bot?
+- [X] Improve Google Calendar visuals by using its API instead of an `iframe` (Uses an interlocking layout of event cards instead of a calendar)
+- [X] Integrate with WOOF Discord bot? (Calls Discord REST API)
