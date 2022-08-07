@@ -588,6 +588,8 @@ h5 {
     margin-bottom: 5rem;
 
     border-radius: 10px;
+
+    animation: fadeup 0.5s ease-out;
 }
 
 @media screen and (max-width: 25rem) {
@@ -605,7 +607,7 @@ h5 {
 
 @media screen and (min-width: 65rem) {
     .events {
-        height: 2200px;
+        height: 2400px;
     }
 }
 
