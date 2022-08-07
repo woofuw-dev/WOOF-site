@@ -1,45 +1,42 @@
 const NUM_CARD_IMAGES = 5;
 const EVENT_API = 'https://woofclub.xyz/api/v1/events';
-var events = [{}];
 
-try{
-    //get events from server
-    fetch(EVENT_API).then(response =>{
-        console.log(response);
-        if (response.ok) {
-            return response.json();
-        }
-        else {throw Error("Event request failed.")}
-    }).then(data =>{
-        console.log(data);
-        events = data;
-    })
-} catch (e) {
-    console.log(e);
-}
+makeEvents();
 
-if (events.length > 0 && events[0].name != null) { // Checks if any events are planned
-    events.forEach(makeCard);
-}
-else { // display "No events planned :(" if no events found
-    let noevent = document.createElement('div');
-    noevent.className = 'noevent';
-    document.body.childNodes.item(1).firstChild.appendChild(noevent);
+async function makeEvents() {
+    var events = [];
+    try{
+        //get events from server
+        const response = await fetch(EVENT_API);
+        if (!response.ok) throw Error("Event request failed.");
+        events = await response.json();
 
-    let title = document.createElement('h1');
-    title.innerText = "No events planned :(";
-    noevent.appendChild(title);
+    } catch (e) {
+        console.log(e);
+    }
+
+    console.log(events);
+
+    if (events.length > 0 && events[0].name != null) { // Checks if any events are planned
+        events.forEach(makeCard);
+    }
+    else { // display "No events planned :(" if no events found
+        let noevent = document.createElement('div');
+        noevent.className = 'noevent';
+        document.body.childNodes.item(1).firstChild.appendChild(noevent);
+    
+        let title = document.createElement('h1');
+        title.innerText = "No events planned :(";
+        noevent.appendChild(title);
+    }
 }
 
 function makeCard(value, index, array) { // Makes a new card for each event
-    let cardcontainer = document.createElement('div');
-    cardcontainer.className = 'cardcontainer';
-    document.body.childNodes.item(1).firstChild.appendChild(cardcontainer);
 
     // make new card
     let card = document.createElement('div');
     card.className = 'card';
-    cardcontainer.appendChild(card);
+    document.body.childNodes.item(1).firstChild.appendChild(card);
 
     // add image element
     let img = document.createElement("img");
