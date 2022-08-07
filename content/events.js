@@ -5,13 +5,13 @@
 const NUM_CARD_IMAGES = 5; // Number of placeholder images currently supported
 const EVENT_API = 'https://woofclub.xyz/api/v1/events'; // Link to the API endpoint
 
-makeEvents(); // Calls async function
+// Call main, and call on refresh
+let cached_events;
+main();
+document.body.onresize = main;
 
-/**
- * Makes an API call to the Discord API endpoint to get events from the WOOF server.
- * Then creates a card for each event.
- */
-async function makeEvents() {
+// Fetch events from the server
+async function getEvents() {
     var events = []; // Array to hold events
 
     // Make a call to API Endpoint
@@ -22,20 +22,29 @@ async function makeEvents() {
 
     } catch (e) { console.log(e) }
 
-    console.log(events);
+    return events;
+}
 
-    if (events.length > 0 && events[0].name != null) { // Checks if any events are planned
-        events.forEach(makeCard);
-    }
-    else { // Display "No events planned :(" if no events found
-        let noevent = document.createElement('div');
-        noevent.className = 'noevent';
-        document.body.childNodes.item(1).firstChild.appendChild(noevent);
+// Creates a group of columns based on window width
+function genColumns() {
+    const cardWidth = 450; // px
+    const browserWidth = document.querySelector(".events").clientWidth;
+    
+    console.info(cardWidth, browserWidth);
 
-        let title = document.createElement('h1');
-        title.innerText = "No events planned :(";
-        noevent.appendChild(title);
+    // Find number of columns that fit, at least one
+    const columns = Math.max(1, Math.floor(browserWidth / cardWidth));
+
+    console.info(columns);
+
+    const boxes = [];
+    for (let i = 0; i < columns; i++) {
+        const box = document.createElement("div");
+        box.className = "eventcolumn";
+        boxes.push(box);
     }
+
+    return boxes;
 }
 
 /**
@@ -46,12 +55,11 @@ async function makeEvents() {
  * @param {*} index The position in the array
  * @param {*} array The array Object itself
  */
-function makeCard(value, index, array) {
+ function makeCard(value, index, array) {
 
     /* Make new card */
     let card = document.createElement('div');
     card.className = 'card';
-    document.body.childNodes.item(1).firstChild.appendChild(card);
 
     /* Add image element */
     let img = document.createElement("img");
@@ -82,4 +90,47 @@ function makeCard(value, index, array) {
     let subtitle = document.createElement('p');
     subtitle.innerText = value.description; // Gets event description
     container.appendChild(subtitle);
+
+    return card;
+}
+
+// Returns the shortest element in a list of elements
+function getShortestOf(elements) {
+    return elements.slice().sort((a, b) => {
+        return a.offsetHeight - b.offsetHeight;
+    })[0];
+}
+
+// Main logic
+async function main() {
+    // Remove columns (for after resize)
+    const container = document.querySelector(".events");
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+
+    // Get events from server if not already done
+    const events = cached_events || await getEvents();
+    cached_events = events;
+    console.info(events);
+
+    if (events.length > 0) {
+        // Populate columns
+        const columns = genColumns();        
+        for (c of columns) {
+            container.appendChild(c);
+        }
+        for (e of events) {
+            getShortestOf(columns).appendChild(makeCard(e));
+        }
+    } else {
+        // Alternatively, show a message
+        let noevent = document.createElement('div');
+        noevent.className = 'noevent';
+        document.body.childNodes.item(1).firstChild.appendChild(noevent);
+
+        let title = document.createElement('h1');
+        title.innerText = "No events planned :(";
+        noevent.appendChild(title);
+    }
 }

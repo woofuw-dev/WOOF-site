@@ -240,7 +240,7 @@ h5 {
     font-family: lato, Helvetica, sans-serif;
 
     border-radius: 4rem;
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 
     display: grid;
     grid-template-rows: 3.5rem 9rem 2rem auto;
@@ -519,10 +519,7 @@ h5 {
     }
 }
 
-@media only screen and (max-width : 700px) {}
-
-@media only screen and (max-width : 480px) {
-
+@media only screen and (max-width : 700px) {
     .hero {
         grid-column: 2;
         grid-template-columns: auto;
@@ -535,10 +532,6 @@ h5 {
 
     .hero-ct p {
         max-width: 100%;
-    }
-
-    .header {
-        flex-direction: column;
     }
 
     .picture {
@@ -554,6 +547,13 @@ h5 {
     .hero-ct {
         justify-content: center;
     }
+}
+
+@media only screen and (max-width : 480px) {
+
+    .header {
+        flex-direction: column;
+    }
 
 }
 
@@ -568,12 +568,16 @@ h5 {
     padding-top: 7rem;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row;
 
-    align-content: center;
+    justify-content: center;
     grid-column-start: 2;
+}
 
-    height: auto;
+.eventcolumn {
+    display: flex;
+    flex-flow: column;
+    height: min-content;
 }
 
 .card {
@@ -588,32 +592,12 @@ h5 {
     margin-bottom: 5rem;
 
     border-radius: 10px;
-
-    animation: fadeup 0.5s ease-out;
 }
 
 @media screen and (max-width: 25rem) {
     .card {
         max-width: 95vw;
         margin-bottom: 2rem;
-    }
-}
-
-@media screen and (min-width: 30rem) {
-    .events {
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 65rem) {
-    .events {
-        height: 2400px;
-    }
-}
-
-@media screen and (min-width: 95rem) {
-    .events {
-        height: 1600px;
     }
 }
 
