@@ -1,6 +1,6 @@
 {
   "name": "woof-site",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "WOOF's Website",
   "main": "index.js",
   "type": "module",
@@ -11,16 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cat-corp/WOOF-site.git"
+    "url": "git+https://github.com/woofuw-dev/WOOF-site.git"
   },
-  "author": "by77er",
-  "license": "ISC",
+  "authors": ["by77er","HyperionSkunk","Rastertail"],
+  "license": "CC BY-NC 4.0",
   "bugs": {
-    "url": "https://github.com/cat-corp/WOOF-site/issues"
+    "url": "https://github.com/woofuw-dev/WOOF-site/issues"
   },
-  "homepage": "https://github.com/cat-corp/WOOF-site#readme",
+  "homepage": "https://github.com/woofuw-dev/WOOF-site#readme",
   "dependencies": {
-    "fetch": "^1.1.0",
     "fs-extra": "^10.0.0",
     "pug": "^3.0.2"
   },
