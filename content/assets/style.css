@@ -173,7 +173,6 @@ h5 {
         opacity: 0;
 
         transform: translateY(3rem);
-
     }
 
 
@@ -191,6 +190,16 @@ h5 {
     margin-bottom: 8vh;
     width: 100%;
     max-width: 50rem;
+
+    mask-image: url(img/edge.png);
+    -webkit-mask-image: url(img/edge.png);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 /* About */
