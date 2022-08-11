@@ -589,6 +589,10 @@ h5 {
     height: min-content;
 }
 
+.eventcolumn + .eventcolumn {
+    margin-left: 5rem;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     background-color: white;
@@ -597,7 +601,6 @@ h5 {
 
     width: 25rem;
 
-    margin-inline: 2.5rem;
     margin-bottom: 5rem;
 
     border-radius: 10px;
@@ -700,4 +703,6 @@ footernav {
 .navcontainer {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
