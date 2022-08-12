@@ -6,9 +6,17 @@ const NUM_CARD_IMAGES = 5; // Number of placeholder images currently supported
 const EVENT_API = 'https://woofclub.xyz/api/v1/events'; // Link to the API endpoint
 
 // Call main, and call on refresh
-let cached_events;
+let cards;
 main();
-document.body.onresize = main;
+
+// Only reformat if the width of the window changed - ignore height changes
+let last_width = document.querySelector(".events").clientWidth;
+window.addEventListener("resize", async (_) => {
+    // Don't do anything if only the height changed
+    if (document.querySelector(".events").clientWidth === last_width) return;
+    last_width = document.querySelector(".events").clientWidth;
+    await main();
+});
 
 // Fetch events from the server
 async function getEvents() {
@@ -22,6 +30,8 @@ async function getEvents() {
 
     } catch (e) { console.log(e) }
 
+    console.info(events);
+
     return events;
 }
 
@@ -30,12 +40,8 @@ function genColumns() {
     const cardWidth = 450; // px
     const browserWidth = document.querySelector(".events").clientWidth;
     
-    console.info(cardWidth, browserWidth);
-
     // Find number of columns that fit, at least one
     const columns = Math.max(1, Math.floor(browserWidth / cardWidth));
-
-    console.info(columns);
 
     const boxes = [];
     for (let i = 0; i < columns; i++) {
@@ -101,28 +107,39 @@ function getShortestOf(elements) {
     })[0];
 }
 
-// Main logic
-async function main() {
-    // Remove columns (for after resize)
-    const container = document.querySelector(".events");
-    while (container.firstChild) {
-        container.removeChild(container.lastChild);
-    }
+// Creates and populates columns of event cards if necessary
+let cols;
+function refreshColumns(cards) {
+    const new_cols = genColumns();
+    if (!cols || new_cols.length !== cols.length) {
+        // Remove columns (for after resize)
+        const container = document.querySelector(".events");
+        while (container.firstChild) {
+            container.removeChild(container.lastChild);
+        }
 
-    // Get events from server if not already done
-    const events = cached_events || await getEvents();
-    cached_events = events;
-    console.info(events);
+        cols = new_cols;
 
-    if (events.length > 0) {
-        // Populate columns
-        const columns = genColumns();        
-        for (c of columns) {
+        for (c of cols) {
             container.appendChild(c);
         }
-        for (e of events) {
-            getShortestOf(columns).appendChild(makeCard(e));
+        for (card of cards) {
+            getShortestOf(cols).appendChild(card);
         }
+
+    }
+}
+
+
+// Main logic
+async function main() {
+    // Get events from server if not already done
+    const event_cards = cards || (await getEvents()).map(makeCard);
+    cards = event_cards;
+
+    if (cards.length > 0) {
+        // Populate columns
+        refreshColumns(cards);
     } else {
         // Alternatively, show a message
         let noevent = document.createElement('div');

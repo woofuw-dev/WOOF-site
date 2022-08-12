@@ -604,6 +604,8 @@ h5 {
     margin-bottom: 5rem;
 
     border-radius: 10px;
+
+    animation: fadeup 0.3s ease-out;
 }
 
 @media screen and (max-width: 25rem) {
