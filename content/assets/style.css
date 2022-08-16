@@ -356,6 +356,13 @@ h5 {
 
 .activity img {
     max-width: 90vw;
+    width: 30rem;
+
+    object-fit: cover;
+    aspect-ratio: 1.75;
+
+    border-radius: 5rem;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px .4rem 0.2rem);
 }
 
 .activity h2 {
