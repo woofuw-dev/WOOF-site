@@ -1,4 +1,4 @@
-const NUM_CAROUSEL_IMAGES = 12;
+const NUM_CAROUSEL_IMAGES = 16;
 
 const IMG = document.getElementById("splashimg");
 
