@@ -39,7 +39,7 @@ async function getEvents() {
 function genColumns() {
     const cardWidth = 450; // px
     const browserWidth = document.querySelector(".events").clientWidth;
-    
+
     // Find number of columns that fit, at least one
     const columns = Math.max(1, Math.floor(browserWidth / cardWidth));
 
@@ -61,7 +61,7 @@ function genColumns() {
  * @param {*} index The position in the array
  * @param {*} array The array Object itself
  */
- function makeCard(value, index, array) {
+function makeCard(value) {
 
     /* Make new card */
     let card = document.createElement('div');
@@ -89,15 +89,64 @@ function genColumns() {
 
     /* make title */
     let title = document.createElement('h1');
-    title.innerText = value.name; // Adds event title
+    title.innerHTML = formatText(value.name); // Adds event title
     container.appendChild(title);
 
     /* make description */
     let subtitle = document.createElement('p');
-    subtitle.innerText = value.description; // Gets event description
+    subtitle.innerHTML = formatText(value.description); // Gets event description
     container.appendChild(subtitle);
 
     return card;
+}
+
+/**
+ * Replaces Discord markdown with HTML formatting blocks. Assumes call uses the
+ * innerHTML element instead of innerText. Is recursive.
+ * 
+ * Currently supports: bold italics, bold, italics, underline, strikethrough and newlines.
+ * 
+ * @param {*} text Text to format.
+ * @returns A formatted string containing HTML codes.
+ */
+function formatText(text) {
+    if (text.indexOf('***') != text.lastIndexOf('***')) { // bold italics
+        text = text.replace('***', '<b><i>').replace('***', '</i></b>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('**') != text.lastIndexOf('**')) { // bold
+        text = text.replace('**', '<b>').replace('**', '</b>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('*') != text.lastIndexOf('*')) { // italics with *str*
+        text = text.replace('*', '<i>').replace('*', '</i>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('__') != text.lastIndexOf('__')) { // underline
+        text = text.replace('__', '<u>').replace('__', '</u>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('_') != text.lastIndexOf('_')) { // italics with _str_
+        text = text.replace('_', '<i>').replace('_', '</i>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('~~') != text.lastIndexOf('~~')) { // strikethrough
+        text = text.replace('~~', '<strike>').replace('~~', '</strike>');
+
+        return formatText(text);
+    }
+    else if (text.indexOf('\n') != -1) { // newline
+        text = text.replace('\n', '<br>');
+
+        return formatText(text);
+    }
+
+    return text;
 }
 
 // Returns the shortest element in a list of elements
