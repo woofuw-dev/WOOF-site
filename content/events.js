@@ -7,6 +7,7 @@ const EVENT_API = 'https://woofclub.xyz/api/v1/events'; // Link to the API endpo
 
 // Call main, and call on refresh
 let cards;
+let events;
 main();
 
 // Only reformat if the width of the window changed - ignore height changes
@@ -20,7 +21,7 @@ window.addEventListener("resize", async (_) => {
 
 // Fetch events from the server
 async function getEvents() {
-    var events = []; // Array to hold events
+    events = []; // Clear event array
 
     // Make a call to API Endpoint
     try {
@@ -40,8 +41,14 @@ function genColumns() {
     const cardWidth = 450; // px
     const browserWidth = document.querySelector(".events").clientWidth;
 
-    // Find number of columns that fit, at least one
-    const columns = Math.max(1, Math.floor(browserWidth / cardWidth));
+    // Find number of columns that fit, at minimum the number of events
+    var minColumns;
+    if (Math.floor(browserWidth / cardWidth) > events.length) {
+        minColumns = events.length;
+    } else {
+        minColumns = Math.max(1, Math.floor(browserWidth / cardWidth));
+    }
+    const columns = minColumns;
 
     const boxes = [];
     for (let i = 0; i < columns; i++) {
